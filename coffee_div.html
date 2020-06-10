@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>div布局</title>
+
+    <style>
+        p {
+            text-indent: 2em;
+            margin: 0px 0px 5px 0px;
+            padding: 0px;
+        }
+
+        hr {
+            width: 110%;
+            border-top: 5px double lightblue;
+        }
+
+        h2 {
+            margin: 5px;
+        }
+
+        img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .coffeeImg {
+            width: 120px;
+            height: 100px;
+            max-width: 100%;
+            max-height: 100%;
+            margin-right: 5px;
+            float: left;
+        }
+
+        table.coffeetable {
+            font-family: verdana, arial, sans-serif;
+            color: #333333;
+            border-width: 1px;
+            border-color: #666666;
+            border-collapse: collapse;
+            margin: auto;
+            width: 100%;
+            text-align: center;
+        }
+
+        table.coffeetable tr td:nth-child(2)::before {
+            content: "￥";
+        }
+
+        table.coffeetable th {
+            font-size: 24px;
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #666666;
+            background-color: #dedede;
+        }
+
+        table.coffeetable td {
+            border-width: 1px;
+            font-size: 16px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #666666;
+            background-color: #ffffff;
+        }
+
+
+
+        .container {
+            width: 60%;
+            overflow: hidden;
+            margin: auto;
+            position: relative;
+        }
+
+        .header {
+            margin: auto;
+            background-color: lightslategrey;
+            justify-content: center;
+            /*水平居中*/
+            align-items: center;
+            /*垂直居中*/
+            font: bold 50px "宋体";
+            color: white;
+            height: 100px;
+            display: flex;
+        }
+
+        .footer {
+            height: 30px;
+            width: 60%;
+            margin: 0px auto;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: lightslategrey;
+            color: white;
+            font-family: 宋体;
+            justify-content: center;
+            /*水平居中*/
+            align-items: center;
+            /*垂直居中*/
+            display: flex;
+            clear: both;
+        }
+
+        img.header {
+            width: 50px;
+            height: 50px;
+            margin: 0px 5px 0px 0px;
+        }
+
+        div.coffeelist {
+            background-color: lightyellow;
+            display: inline-block;
+            width: 20%;
+            vertical-align: top;
+            position: absolute;
+            height: 100%;
+        }
+
+        ul.coffeelist {
+            text-align: left;
+            font-size: 20px;
+            list-style-type: none;
+            text-indent: 1em;
+            padding: 0px;
+            margin: 5px 0px 0px -20px;
+            width: 98%;
+            display: inline-block;
+        }
+
+        ul.coffeelist p {
+            text-indent: 3em;
+        }
+
+        ul.coffeelist a:hover {
+            color: dodgerblue;
+            cursor: pointer;
+        }
+
+        div.banner {
+            display: inline-block;
+            width: 80%;
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img class="header" src="http://pic.90sjimg.com/design/01/45/61/40/591fde46929dd.png" alt="logo">
+            来杯咖啡吗?
+        </div>
+
+        <div>
+            <div class="coffeelist">
+                <ul class="coffeelist">
+                    <li style="font-size: 22px; text-align: left;padding: 0px 0px 15px 0px; ">点击查看介绍</li>
+                    <hr>
+                    <li><a class="coffeelink" id="1" onclick="change(this);">
+                            <p>拿铁</p>
+                        </a></li>
+                    <hr>
+                    <li><a class="coffeelink" id="2" onclick="change(this)">
+                            <p>卡布奇诺</p>
+                        </a></li>
+                    <hr>
+                    <li><a class="coffeelink" id="3" onclick="change(this)">
+                            <p>美式咖啡</p>
+                        </a></li>
+                    <hr>
+                    <li><a class="coffeelink" id="4" onclick="change(this)">
+                            <p>玛琪雅朵</p>
+                        </a></li>
+                    <hr>
+                    <li><a class="coffeelink" id="5" onclick="change(this)">
+                            <p>意式浓缩</p>
+                        </a></li>
+                    <hr>
+                    <li><a class="coffeelink" id="6" onclick="change(this)">
+                            <p>蓝山咖啡</p>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="banner">
+                <img src="img/banner.jpg" alt="banner">
+                <table class="coffeetable">
+                    <tr>
+                        <th>咖啡</th>
+                        <th>价格</th>
+                    </tr>
+                    <tr>
+                        <td>拿铁</td>
+                        <td>23.00</td>
+                    </tr>
+                    <tr>
+                        <td>卡布奇诺</td>
+                        <td>16.00</td>
+                    </tr>
+                    <tr>
+                        <td>美式咖啡</td>
+                        <td>18.00</td>
+                    </tr>
+                    <tr>
+                        <td>玛琪雅朵</td>
+                        <td>18.00</td>
+                    </tr>
+                    <tr>
+                        <td>意式浓缩</td>
+                        <td>12.00</td>
+                    </tr>
+                    <tr>
+                        <td>蓝山咖啡</td>
+                        <td>26.00</td>
+                    </tr>
+                </table>
+                <img class="coffeeImg" id="coffeeImg"
+                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1591719191610&di=39c8137bc2ca7c136e653e4c5f12817c&imgtype=0&src=http%3A%2F%2Fimg3.imgtn.bdimg.com%2Fit%2Fu%3D3112181168%2C1934218649%26fm%3D214%26gp%3D0.jpg"
+                    alt="">
+                <h2 id="coffeeType" style="display: inline-block;">拿铁</h2>
+                <p id="coffeeContent" style="clear: right;">
+                    拿铁咖啡(CoffeeLatte)是花式咖啡的一种，
+                    是咖啡与牛奶交融的极至之作。意式拿铁咖啡为纯牛奶加咖啡，美式拿铁则将 部分牛奶替换成奶泡，本地的拿铁多为此种。
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        版权归属©Wjh
+    </div>
+</body>
+
+
+<script>
+    function change(a) {
+        // window.alert(a.id);
+        if (a.id == 2) {
+            document.getElementById("coffeeType").innerHTML = "卡布奇诺";
+            document.getElementById("coffeeContent").innerHTML = "卡布奇诺是一种以同量的意大利浓缩和泡沫牛奶制作而成的意式咖啡。卡布奇诺是一do种泡沫咖啡，喝下去后能品味到奶泡的甜腻，再接着就能品味到意式浓缩的苦涩和浓郁。";
+            document.getElementById("coffeeImg").src = "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1591725155581&di=b9c792ace9121fda3bb733fff570d817&imgtype=0&src=http%3A%2F%2Fimg1.imgtn.bdimg.com%2Fit%2Fu%3D2460390741%2C3923375044%26fm%3D214%26gp%3D0.jpg";
+        } else if (a.id == 3) {
+            document.getElementById("coffeeType").innerHTML = "美式咖啡";
+            document.getElementById("coffeeContent").innerHTML = "美式时使用滴滤式咖啡壶所制作的黑咖啡，简单来说，美式就是加了水的意式浓缩，口感相对较淡，但萃取时间较长（四到五分钟），所以咖啡因含量也较高，不宜多喝。";
+            document.getElementById("coffeeImg").src = "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1591724996678&di=56cb047326a434b349fed3810c9e51ce&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201504%2F04%2F20150404H0756_PZjCw.jpeg";
+        } else if (a.id == 4) {
+            document.getElementById("coffeeType").innerHTML = "玛琪雅朵";
+            document.getElementById("coffeeContent").innerHTML = "玛奇朵在意大利文里是“烙印、印记”的意思，焦糖玛奇朵就象征着甜蜜的印记。马琪雅朵不是在浓缩中加入鲜奶油、牛奶，只用加上两大勺绵密的奶泡就做好了一杯马琪雅朵，品尝马琪雅朵要注意不要搅拌，找到合适角度后直接喝，能在口中依然保持咖啡的层次感。";
+            document.getElementById("coffeeImg").src = "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1591724996677&di=3d7ac9997da1aeb158e4932b03c2425b&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20161216%2Fac55af10b33c460ca0d5ed0b1b705392_th.jpg";
+        } else if (a.id == 5) {
+            document.getElementById("coffeeType").innerHTML = "意式浓缩";
+            document.getElementById("coffeeContent").innerHTML = "意式浓缩是一种具有强烈口感的咖啡类型，发明及发展于意大利，制作过程借由短时间而高压冲煮而成，将咖啡的风味浓缩后，口感尤为强烈常作为其他风味调制咖啡的基础，如摩卡，拿铁，玛奇朵等。";
+            document.getElementById("coffeeImg").src = "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1591724996677&di=e9a0827fe9896139a73178d2708d7590&imgtype=0&src=http%3A%2F%2Fwww.guojicoffee.com%2Fuploadfile%2F2016%2F0901%2F20160901031640608.jpg";
+        } else if (a.id == 6) {
+            document.getElementById("coffeeType").innerHTML = "蓝山咖啡";
+            document.getElementById("coffeeContent").innerHTML = "蓝山咖啡的独特香味是任何其他地区的咖啡都调和不来的。不用打开包装就可以闻到极其浓郁的水果香加巧克力香和奶油香。尝过真蓝山咖啡的人，就可以知道，蓝山咖啡的口味是非常好的。入口醇厚，回味甘甜，十分顺口。其他的任何咖啡都不能达到这样的口感。";
+            document.getElementById("coffeeImg").src = "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1591724996676&di=a18de8148c1f531b582b49a5659d9286&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20161202%2F329f2c0ece124d388259936c14e24cb4_th.jpeg";
+        } else if (a.id == 1) {
+            document.getElementById("coffeeType").innerHTML = "拿铁";
+            document.getElementById("coffeeContent").innerHTML = " 拿铁咖啡(CoffeeLatte)是花式咖啡的一种，是咖啡与牛奶交融的极至之作。意式拿铁咖啡为纯牛奶加咖啡，美式拿铁则将 部分牛奶替换成奶泡，本地的拿铁多为此种。 那句著名 的“我不在咖啡馆，就在去咖啡馆的路.上”是一位音乐家在维也纳说出来的。维也纳的空气里，永远都飘荡着音乐和拿铁(Latte)咖啡的味道。";
+            document.getElementById("coffeeImg").src = "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1591719191610&di=39c8137bc2ca7c136e653e4c5f12817c&imgtype=0&src=http%3A%2F%2Fimg3.imgtn.bdimg.com%2Fit%2Fu%3D3112181168%2C1934218649%26fm%3D214%26gp%3D0.jpg";
+        }
+    }
+</script>
+
+</html>
