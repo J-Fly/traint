@@ -83,7 +83,7 @@
             flex-wrap: wrap;
             /*让弹性盒元素在必要的时候拆行*/
             align-items: baseline;
-            justify-content: center;
+            justify-content: space-between;
             margin-top: 20px;
         }
 
@@ -96,45 +96,65 @@
         .show-item>img {
             display: block;
             margin: 0px;
-            
+
         }
 
-        .show-item>img:hover{
+        .show-item>img:hover {
             cursor: pointer;
             transform: scale(1.2);
         }
-        
+
         .show-item {
-            margin: 15px;
+            /* margin: 15px; */
         }
 
         .bottom {
-            background-color: #B22222;
-            width: 100%
+            /* background-color: #B22222; */
+            width: 1200px;
+            margin: 0 auto;
+            height: 250px;
         }
 
         .text {
-            padding: 15px 150px 15px 150px;
+            display: inline-block;
+            padding: 15px 50px 15px 50px;
+            float: left;
         }
 
         .text>p {
-            padding-top: 75px;
-            display: inline-block;
+            /* padding-top: 75px; */
+            /* display: inline-block; */
             color: white;
             font-size: 30px;
-            width: 500px;
-            vertical-align: top;
+            width: 450px;
+            /* vertical-align: top; */
+            /* float: left; */
+
         }
 
-        .text>img {
+        .pic>img {
             display: inline-block;
             width: auto;
             height: auto;
-            margin-left: 350px;
+            /* margin-left: 350px; */
+            float: right;
+            padding: 15px 50px 15px 50px;
         }
 
         .footer {
-            height: 30px;
+            width: 100%;
+            background-color: #B22222;
+        }
+
+        .copyright>hr {
+            width: 100%;
+            border-top: 1px solid #FFFFFF;
+            margin: 0 auto;
+        }
+
+        .copyright {
+            width: 1200px;
+            height: 50px;
             width: 100%;
             margin: 0px auto;
             font-size: 18px;
@@ -143,12 +163,7 @@
             color: white;
             text-align: center;
             font-family: 宋体;
-        }
-
-        .footer>hr {
-            width: 100%;
-            border-top: 1px solid #FFFFFF;
-            margin: 0 auto;
+            line-height: 25px;
         }
     </style>
 </head>
@@ -156,39 +171,43 @@
 <body>
     <div class="container">
         <div style="width: 100%;background-color: #B22222;">
-        <div class="header">
-            <div class="header-title">
-                <div class="left-title">
-                    <img src="./img/showme.png" alt="logo" class="icon">
-                    <p>王景辉的个人展示页</p>
-                </div>
-                <div class="right-title">
-                    <a href="#favoritemovie">喜欢的电影</a>
-                    <a href="#favoritenovel">喜欢的小说</a>
-                    <a href="#text">聊一聊</a>
+            <div class="header">
+                <div class="header-title">
+                    <div class="left-title">
+                        <img src="./img/showme.png" alt="logo" class="icon">
+                        <p>王景辉的个人展示页</p>
+                    </div>
+                    <div class="right-title">
+                        <a href="#favoritemovie">喜欢的电影</a>
+                        <a href="#favoritenovel">喜欢的小说</a>
+                        <a href="#text">聊一聊</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
         <div class="content">
             <div class="favorite">
                 <h2 id="favoritemovie" class="title">最喜欢的电影</h2>
                 <hr style="width: 80px;border-top:5px solid #B22222;margin: 0 auto;">
                 <div class="show-list">
                     <div class="show-item">
-                        <img  src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p457760035.webp" alt="" onclick="javascript:location.href='https://movie.douban.com/subject/1292722/'"/>
+                        <img src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p457760035.webp" alt=""
+                            onclick="javascript:location.href='https://movie.douban.com/subject/1292722/'" />
                         <h4>泰坦尼克号</h4>
                     </div>
                     <div class="show-item">
-                        <img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p480747492.webp" alt="" onclick="javascript:location.href='https://movie.douban.com/subject/1292052/'"/>
+                        <img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p480747492.webp" alt=""
+                            onclick="javascript:location.href='https://movie.douban.com/subject/1292052/'" />
                         <h4>肖申克的救赎</h4>
                     </div>
                     <div class="show-item">
-                        <img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2454274023.webp" alt="" onclick="javascript:location.href='https://movie.douban.com/subject/26694988/'"/>
+                        <img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2454274023.webp" alt=""
+                            onclick="javascript:location.href='https://movie.douban.com/subject/26694988/'" />
                         <h4>比海更深</h4>
                     </div>
                     <div class="show-item">
-                        <img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2550757929.webp" alt="" onclick="javascript:location.href='https://movie.douban.com/subject/1298624/'"/>
+                        <img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2550757929.webp" alt=""
+                            onclick="javascript:location.href='https://movie.douban.com/subject/1298624/'" />
                         <h4>闻香识女人</h4>
                     </div>
                 </div>
@@ -198,38 +217,47 @@
                 <hr style="width: 80px;border-top:5px solid #B22222;margin: 0 auto;">
                 <div class="show-list">
                     <div class="show-item">
-                        <img src="https://img9.doubanio.com/view/subject/s/public/s4442295.jpg" alt="" onclick="javascript:location.href='https://book.douban.com/subject/6953273/'"/>
+                        <img src="https://img9.doubanio.com/view/subject/s/public/s4442295.jpg" alt=""
+                            onclick="javascript:location.href='https://book.douban.com/subject/6953273/'" />
                         <h4>盗墓笔记</h4>
                     </div>
                     <div class="show-item">
-                        <img src="https://img3.doubanio.com/view/subject/s/public/s28094021.jpg" alt="" onclick="javascript:location.href='https://book.douban.com/subject/26371317/'"/>
+                        <img src="https://img3.doubanio.com/view/subject/s/public/s28094021.jpg" alt=""
+                            onclick="javascript:location.href='https://book.douban.com/subject/26371317/'" />
                         <h4>24个比利</h4>
                     </div>
                     <div class="show-item">
-                        <img src="https://img3.doubanio.com/view/subject/s/public/s28604380.jpg" alt="" onclick="javascript:location.href='https://book.douban.com/subject/26390426/'"/>
+                        <img src="https://img3.doubanio.com/view/subject/s/public/s28604380.jpg" alt=""
+                            onclick="javascript:location.href='https://book.douban.com/subject/26390426/'" />
                         <h4>比利战争</h4>
                     </div>
                     <div class="show-item">
-                        <img src="https://img1.doubanio.com/view/subject/s/public/s27644348.jpg" alt="" onclick="javascript:location.href='https://book.douban.com/subject/2253413/'"/>
+                        <img src="https://img1.doubanio.com/view/subject/s/public/s27644348.jpg" alt=""
+                            onclick="javascript:location.href='https://book.douban.com/subject/2253413/'" />
                         <h4>巴黎圣母院</h4>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="bottom">
-            <div id="text" class="text">
-                <p>再快的AE86也追不上坐在奔驰里的人————《bzzb圣经新约》
-                </p>
-                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1592070581171&di=660af16e01d29c8398bcf25a9493fd0c&imgtype=0&src=http%3A%2F%2F01imgmini.eastday.com%2Fmobile%2F20181226%2F20181226003105_985cdfbf38fc8e8adbde9e459927cf9e_2_mwpm_03200403.jpg"
-                    alt="">
+        <div style="width: 100%; background-color:#B22222;">
+            <div class="bottom">
+                <div id="text" class="text">
+                    <p>再快的AE86也追不上坐在奔驰里的人————《bzzb圣经新约》
+                    </p>
+                </div>
+                <div class="pic">
+                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1592070581171&di=660af16e01d29c8398bcf25a9493fd0c&imgtype=0&src=http%3A%2F%2F01imgmini.eastday.com%2Fmobile%2F20181226%2F20181226003105_985cdfbf38fc8e8adbde9e459927cf9e_2_mwpm_03200403.jpg"
+                        alt="">
+                </div>
             </div>
-            <div>
 
-            </div>
         </div>
+
         <div class="footer">
-            <hr>
-            版权归属©Wjh
+            <div class="copyright">
+                <hr>
+                版权归属©Wjh
+            </div>
         </div>
     </div>
 </body>
