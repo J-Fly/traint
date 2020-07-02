@@ -164,7 +164,8 @@
         }
     </style>
 </head>
-<script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1279042566'%3E%3C/span%3E%3Cscript src='https://s9.cnzz.com/z_stat.php%3Fid%3D1279042566%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+<script type="text/javascript">
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1279042566'%3E%3C/span%3E%3Cscript src='https://s9.cnzz.com/z_stat.php%3Fid%3D1279042566%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
 </script>
 <body>
     <div class="container">
@@ -258,6 +259,13 @@
             </div>
         </div>
     </div>
+
+    <script type="text/javascript">
+         $('.show-item').click(function () {
+            var label = $(this).children()[1];
+            _czc.push(["_trackEvent",'操作', '跳转到电影', label.innerText,1]);
+        })
+    </script>
 </body>
 
 </html>
